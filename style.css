@@ -1,0 +1,131 @@
+/* Container */
+.country-dropdown {
+    position: absolute;
+    display: inline-block;
+    top:10%;
+    left: 38%;
+    width: 290px;
+  }
+  
+  /* Selected values section */
+  .selected-values {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: cenetr;
+    gap: 5px;
+  }
+  
+  .selected-values.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .selected-values .placeholder {
+    margin-top: 5px;
+    color: #999;
+    height: 20px;
+  }
+  
+  .selected-values .selected-country {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .selected-country {
+    background-color: aqua;
+    padding-inline: 10px;
+    height: 31px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px;
+  }
+  
+  .selected-values .selected-country-text {
+    margin-right: 5px;
+  }
+  
+  .selected-values .selected-country-cross {
+    color: #999;
+    cursor: pointer;
+  }
+  
+  .selected-values .selected-country-cross:hover {
+    color: #ffff;
+  }
+  
+  /* Arrow */
+  .selected-values::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid #333;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .selected-values.open::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  /* Dropdown container */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 99.1%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+  }
+  
+  /* Seach-Bar*/
+  .search-bar {
+    padding-block: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    gap: 10px;
+  }
+  
+  
+  .dropdown input[type="text"] {
+    width: 97%;
+    border: none;
+    outline: none;
+    text-align: start;
+    
+  }
+  
+  /* Checkbox label */
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .checkbox-label:hover {
+    background-color:aqua;
+  }
+  
+  .checkbox-label input[type="checkbox"] {
+    background-color: transparent;
+    margin-right: 8px;
+    height:17px;
+    width:20px;
+  }
+  
+  
